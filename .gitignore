@@ -1,0 +1,5 @@
+debug/
+.DS_Store
+*.png
+__pycache__/
+.python-version
