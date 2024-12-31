@@ -109,3 +109,10 @@ def arrangeBoard(letterTiles):
             if neighbor is None or np.linalg.norm(neighbor.getBoundingBoxCenter() - letterTile.getBoundingBoxCenter()) > 2*np.sqrt(2)*gridSpacing:
                 continue
             letterTile.edges.add(neighbor)
+
+def findWord(img, word):
+    for (bbox, text, confidence) in reader.readtext(np.array(img), detail=1):
+        if text.lower() == word.lower():
+            return bbox
+
+    return None
