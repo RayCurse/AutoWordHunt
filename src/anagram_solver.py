@@ -57,3 +57,4 @@ def inputPath(path, bbox, enterButtonBBox):
     time.sleep(_inputStepDuration)
     _mouseController.release(Button.left)
     time.sleep(_inputStepDuration)
+    time.sleep(0.1)
